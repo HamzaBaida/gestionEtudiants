@@ -27,11 +27,11 @@ class Etudiant(models.Model):
     def save(self, *args, **kwargs):
         moyenne = (self.note_1ere + self.note_2eme) / 2
 
-        if moyenne >= 80:
+        if moyenne >= 85:
             self.mention = 'TB'
-        elif moyenne >= 70:
+        elif moyenne >= 75:
             self.mention = 'B'
-        elif moyenne >= 60:
+        elif moyenne >= 65:
             self.mention = 'AB'
         elif moyenne >= 50:
             self.mention = 'P'
